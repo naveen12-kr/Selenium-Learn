@@ -1,0 +1,443 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>SeleniumLearn</groupId>
+  <artifactId>SeleniumLearn</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+  
+  <dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>3.11.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jasypt</groupId>
+			<artifactId>jasypt</artifactId>
+			<version>1.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>1.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.paulhammant</groupId>
+			<artifactId>ngwebdriver</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.mkolisnyk</groupId>
+			<artifactId>cucumber-runner</artifactId>
+			<version>1.0.8</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>gherkin</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.14.0</version>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>1.2.5</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>1.2.5</version>
+			<scope>test</scope>
+		</dependency>
+
+		
+
+		<dependency>
+			<groupId>com.vimalselvam</groupId>
+			<artifactId>cucumber-extentsreport</artifactId>
+			<version>3.0.2</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.10</version>
+			<exclusions>
+				<exclusion>
+					<!-- exclude testNG otherwise Maven doesn't run TestFeatures -->
+					<groupId>org.testng</groupId>
+					<artifactId>testng</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>3.15.0</version>
+		</dependency>
+		<dependency>
+			<groupId>technology.tabula</groupId>
+			<artifactId>tabula</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.17</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.17</version>
+		</dependency>
+		<!-- <dependency> <groupId>com.relevantcodes</groupId> <artifactId>extentreports</artifactId> 
+			<version>2.41.1</version> </dependency> -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-report-plugin</artifactId>
+			<version>2.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.plexus</groupId>
+			<artifactId>plexus-utils</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>2.16</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>gherkin-jvm-deps</artifactId>
+			<version>1.0.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.mkolisnyk</groupId>
+			<artifactId>cucumber-reports</artifactId>
+			<version>1.2</version>
+			<type>pom</type>
+		</dependency>
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-jvm</artifactId>
+			<version>1.2.5</version>
+			<type>pom</type>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ini4j</groupId>
+			<artifactId>ini4j</artifactId>
+			<version>0.5.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>23.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.cedarsoftware/json-io -->
+		<dependency>
+			<groupId>com.cedarsoftware</groupId>
+			<artifactId>json-io</artifactId>
+			<version>4.9.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.aerogear</groupId>
+			<artifactId>aerogear-otp-java</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+			<version>3.4.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.google.zxing/javase -->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>javase</artifactId>
+			<version>3.4.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.zxing/zxing-parent -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>3.6.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>kg.apc</groupId>
+			<artifactId>cmdrunner</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>kg.apc</groupId>
+			<artifactId>perfmon</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.2.11</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-core</artifactId>
+			<version>2.2.11</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>2.2.11</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>3.0.2</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.warrenstrange</groupId>
+			<artifactId>googleauth</artifactId>
+			<version>1.1.5</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/batik/batik-util -->
+		<dependency>
+			<groupId>batik</groupId>
+			<artifactId>batik-util</artifactId>
+			<version>1.6-1</version>
+		</dependency>
+		<!-- Applitools SDK -->
+		<dependency>
+			<groupId>com.applitools</groupId>
+			<artifactId>eyes-selenium-java3</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+		
+		
+			<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>3.1.5</version>
+</dependency>
+	</dependencies>
+	
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>2.17</version>
+				<executions>
+					<execution>
+						<id>Run parallel tests</id>
+						<phase>integration-test</phase>
+						<goals>
+							<goal>integration-test</goal>
+						</goals>
+						<configuration>
+							<source>1.8</source>
+							<target>1.8</target>
+							<testFailureIgnore>true</testFailureIgnore>
+							<reuseForks>false</reuseForks>
+							<argLine>-Dfile.encoding=UTF-8</argLine>
+							<disableXmlReport>true</disableXmlReport>
+							<forkCount>4</forkCount>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.0</version>
+				<configuration>
+					<useSystemClassLoader>false</useSystemClassLoader>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.surefire</groupId>
+						<artifactId>surefire-junit47</artifactId>
+						<version>2.22.0</version>
+					</dependency>
+					
+					<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>3.7.1</version>
+</dependency>
+
+
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.1.0</version>
+    <scope>test</scope>
+</dependency>
+
+
+					
+				</dependencies>
+
+			</plugin>
+			<plugin>
+				<groupId>com.lazerycode.jmeter</groupId>
+				<artifactId>jmeter-maven-plugin</artifactId>
+				<version>2.8.1</version>
+
+				<executions>
+					<execution>
+						<id>jmeter-tests</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jmeter</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>jmeter-tests2</id>
+						<goals>
+							<goal>results</goal>
+						</goals>
+					</execution>
+				</executions>
+
+				<configuration>
+					<testResultsTimestamp>false</testResultsTimestamp>
+					<downloadExtensionDependencies>false</downloadExtensionDependencies>
+					<errorRateThresholdInPercent>1</errorRateThresholdInPercent>
+					<testResultsTimestamp>false</testResultsTimestamp>
+					<overrideRootLogLevel>DEBUG</overrideRootLogLevel>
+					<suppressJMeterOutput>false</suppressJMeterOutput>
+					<ignoreResultFailures>true</ignoreResultFailures>
+					<showthroughput>true</showthroughput>
+					<scanResultsForFailedRequests>true</scanResultsForFailedRequests>
+
+					<testFilesIncluded>
+						<jMeterTestFile>${Testfile}</jMeterTestFile>
+					</testFilesIncluded>
+
+					<jmeterExtensions>
+						<artifacts>kg.apc:jmeter-plugins-json:2.3</artifacts>
+						<artifacts>kg.apc:jmeter-plugins-prmctl:0.4</artifacts>
+					</jmeterExtensions>
+					<excludedArtifacts>
+						<exclusion>org.slf4j:slf4j-nop</exclusion>
+						<exclusion>org.apache.logging.log4j:log4j-slf4j-impl</exclusion>
+					</excludedArtifacts>
+
+					<testPlanLibraries>
+						<artifact>org.slf4j:slf4j-simple:1.7.25</artifact>
+						<artifact>org.jboss.aerogear:aerogear-otp-java:1.0.0</artifact>
+					</testPlanLibraries>
+
+					<propertiesUser>
+						<threadgroup.count>${Threadcount}</threadgroup.count>
+						<threadgroup.rampup>${Threadrampup}</threadgroup.rampup>
+						<threadgroup.duration>10</threadgroup.duration>
+						<jmeter.save.saveservice.output_format>csv</jmeter.save.saveservice.output_format>
+						<jmeter.save.saveservice.bytes>true</jmeter.save.saveservice.bytes>
+						<jmeter.save.saveservice.label>true</jmeter.save.saveservice.label>
+						<jmeter.save.saveservice.latency>true</jmeter.save.saveservice.latency>
+						<jmeter.save.saveservice.response_code>true</jmeter.save.saveservice.response_code>
+						<jmeter.save.saveservice.response_message>true</jmeter.save.saveservice.response_message>
+						<jmeter.save.saveservice.successful>true</jmeter.save.saveservice.successful>
+						<jmeter.save.saveservice.thread_counts>true</jmeter.save.saveservice.thread_counts>
+						<jmeter.save.saveservice.thread_name>true</jmeter.save.saveservice.thread_name>
+						<jmeter.save.saveservice.time>true</jmeter.save.saveservice.time>
+					</propertiesUser>
+
+					<jMeterProcessJVMSettings>
+						<xms>512</xms>
+						<xmx>4000</xmx>
+						<arguments>
+							<argument>-Xprof</argument>
+							<argument>-Xfuture</argument>
+						</arguments>
+					</jMeterProcessJVMSettings>
+					<!-- <remoteConfig> <startServersBeforeTests>true</startServersBeforeTests> 
+						<serverList>192.168.1.18,192.168.1.16</serverList> <stopServersAfterTests>true</stopServersAfterTests> 
+						</remoteConfig> -->
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<fork>true</fork>
+					<meminitial>1024m</meminitial>
+					<maxmem>2024m</maxmem>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+  
+  
+  
+</project>
